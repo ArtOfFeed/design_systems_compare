@@ -25,3 +25,13 @@ nav > ul > a {
 nav > ul > a.active {
   text-decoration: underline;
 }
+
+.main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  margin: 21.44px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
