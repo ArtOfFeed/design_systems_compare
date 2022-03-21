@@ -1,0 +1,1 @@
+export const Chakra = () => <h2>Chakra</h2>

@@ -1,0 +1,1 @@
+export const Microsoft = () => <h2>Microsoft</h2>

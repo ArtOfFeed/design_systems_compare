@@ -1,0 +1,1 @@
+export const Adobe = () => <h2>Adobe</h2>
