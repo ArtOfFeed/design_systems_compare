@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Input, Button, ButtonGroup, Box, Menu, MenuButton, MenuList, MenuItem, Text, IconButton } from '@chakra-ui/react';
+import { Flex, Input, Button, ButtonGroup, Box, Menu, MenuButton, MenuList, MenuItem, Text } from '@chakra-ui/react';
 import { AttachmentIcon, LinkIcon, ChevronDownIcon, AddIcon } from '@chakra-ui/icons';
 import { BsThreeDots } from 'react-icons/bs';
 import { RiTaskLine } from 'react-icons/ri';
@@ -14,7 +14,7 @@ const Actions = () => {
                 <Button>
                     <Input type="file" id="attach" display="none"></Input>
                     <AttachmentIcon />
-                    <Box as="label" for="attach" pl="5px" cursor="pointer">Attach</Box>
+                    <Box as="label" htmlFor="attach" pl="5px" cursor="pointer">Attach</Box>
                 </Button>
                 <Button>
                     <RiTaskLine />
@@ -30,30 +30,16 @@ const Actions = () => {
                     </MenuButton>
                     <MenuList>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex>
-                                        <CgNotes />
-                                        <Text pl="8px" fontWeight="medium" fontSize="14px">Link Confluence page</Text>
-                                    </Flex>
-                                }
-                            />
+                            {/* <Flex alignItems="center"> */}
+                                <CgNotes />
+                                <Text pl="8px" fontWeight="medium" fontSize="14px">Link Confluence page</Text>
+                            {/* </Flex> */}
                         </MenuItem>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex>
-                                        <BiWorld />
-                                        <Text pl="8px" fontWeight="medium" fontSize="14px">Add web link</Text>
-                                    </Flex>
-                                }
-                            />
+                            <Flex alignItems="center">
+                                <BiWorld />
+                                <Text pl="8px" fontWeight="medium" fontSize="14px">Add web link</Text>
+                            </Flex>
                         </MenuItem>
                     </MenuList>
                 </Menu>
@@ -63,17 +49,10 @@ const Actions = () => {
                     </MenuButton>
                     <MenuList>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex p="8px">
-                                        <AddIcon />
-                                        <Text pl="5px" fontWeight="medium" fontSize="14px">Add apps</Text>
-                                    </Flex>
-                                }
-                            />
+                            <Flex p="8px" alignItems="center">
+                                <AddIcon />
+                                <Text pl="8px" fontWeight="medium" fontSize="14px">Add apps</Text>
+                            </Flex>
                         </MenuItem>
                     </MenuList>
                 </Menu>

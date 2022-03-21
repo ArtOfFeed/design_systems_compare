@@ -101,7 +101,7 @@ const Details = () => {
                                 </Flex>
                                 <Flex w="100%" alignItems="center">
                                     <Text w="37%">Development</Text>
-                                    <Flex w="63%" h="40px" _hover={{bg: "rgb(235, 236, 240)", borderRadius: "5px"}} p="5px" _focus={{boxShadow: "none !important"}}>
+                                    <Flex w="63%" h="40px" _hover={{bg: "hover.gray", borderRadius: "5px"}} p="5px" _focus={{boxShadow: "none !important"}}>
                                         <Button variant="link" w="100%" display="flex" justifyContent="flex-start">
                                             <AiOutlineBranches />
                                             <Link pl="5px" color="#0065FF">Create branch</Link>
@@ -147,7 +147,7 @@ const Details = () => {
                                 </Flex>
                                 <Flex w="100%" alignItems="center">
                                     <Text w="37%">Priority</Text>
-                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "rgb(235, 236, 240)"}}>
+                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "hover.gray"}}>
                                         <option value="option1">
                                             Medium
                                         </option>

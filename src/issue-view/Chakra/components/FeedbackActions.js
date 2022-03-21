@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, Text, Spacer, IconButton, Menu, MenuButton, MenuList, MenuItem, Button, Divider, CloseButton } from '@chakra-ui/react';
+import { Flex, Box, Text, Spacer, IconButton, Menu, MenuButton, MenuList, MenuItem, Button, Divider } from '@chakra-ui/react';
 import { BsThreeDots, BsFillShareFill } from 'react-icons/bs';
 import { ViewIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import { HiSpeakerphone } from 'react-icons/hi';
@@ -58,12 +58,9 @@ const FeedbackActions = () => {
             <Box>
                 <Menu>
                     <MenuButton as={Button} bg="inherit" p="0" >
-                        <IconButton
-                            variant="ghost"
-                            colorScheme="gray"
-                            aria-label="Call Sage"
-                            icon={<BsThreeDots />}
-                        />
+                        <Flex justifyContent="center">
+                            <BsThreeDots />
+                        </Flex> 
                     </MenuButton>
                     <MenuList>
                         <MenuItem>

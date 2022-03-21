@@ -6,12 +6,20 @@ import Configure from './components/Configure.js';
 import Description from './components/Description';
 import FeedbackActions from './components/FeedbackActions';
 
-import { Container, Flex, Box, Heading, Text, Spacer, Menu, MenuButton, MenuList, MenuItem, Button, Badge, ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme, Container, Flex, Box, Heading, Text, Spacer, Menu, MenuButton, MenuList, MenuItem, Button, Badge } from '@chakra-ui/react';
 import { MoonIcon, ChevronDownIcon } from '@chakra-ui/icons';
 
 export const Chakra = () => {
+    const theme = extendTheme({
+        colors: {
+          hover: {
+            gray: "rgb(235, 236, 240)"
+          },
+        },
+    });
+
     return (
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
             <Container maxW="container.xl">
                 <Flex m="20px">
                     <Box w="60%" fontSize="14px">
