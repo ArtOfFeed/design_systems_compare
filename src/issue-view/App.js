@@ -11,7 +11,7 @@ import './App.css';
 const App = () => {
   return (
     <BrowserRouter>
-        <h1>Design System Comparison</h1>
+        <h1 className="main-heading">Design System Comparison</h1>
         <nav>
           <ul>
             <NavLink to="/">Home</NavLink>
