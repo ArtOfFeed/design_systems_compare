@@ -1,1 +1,1 @@
-export const Braid = () => <h2>Braid</h2>
+export const Braid = () => <h2 className="secondary-heading">Braid</h2>

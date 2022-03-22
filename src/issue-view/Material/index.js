@@ -1,1 +1,1 @@
-export const Material = () => <h2>Material</h2>
+export const Material = () => <h2 className="secondary-heading">Material</h2>

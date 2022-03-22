@@ -1,8 +1,10 @@
-h1, h2, h3 {
+h1.main-heading,
+h2.secondary-heading,
+h3.secondary-heading {
   text-align: center;
 }
 
-nav {
+nav.navigation {
   padding: 40px 0;
 }
 

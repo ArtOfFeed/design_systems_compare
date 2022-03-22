@@ -14,7 +14,7 @@ const Actions = () => {
                 <Button>
                     <Input type="file" id="attach" display="none"></Input>
                     <AttachmentIcon />
-                    <Box as="label" for="attach" pl="5px" cursor="pointer">Attach</Box>
+                    <Box as="label" htmlFor="attach" pl="5px" cursor="pointer">Attach</Box>
                 </Button>
                 <Button>
                     <RiTaskLine />

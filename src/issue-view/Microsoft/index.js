@@ -1,1 +1,1 @@
-export const Microsoft = () => <h2>Microsoft</h2>
+export const Microsoft = () => <h2 className="secondary-heading">Microsoft</h2>

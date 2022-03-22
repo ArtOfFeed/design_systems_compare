@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, Text, Spacer, IconButton, Menu, MenuButton, MenuList, MenuItem, Button, Divider, CloseButton } from '@chakra-ui/react';
+import { Flex, Box, Text, Spacer, IconButton, Menu, MenuButton, MenuList, MenuItem, Button, Divider } from '@chakra-ui/react';
 import { BsThreeDots, BsFillShareFill } from 'react-icons/bs';
 import { ViewIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import { HiSpeakerphone } from 'react-icons/hi';
