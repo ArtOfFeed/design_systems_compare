@@ -1,41 +1,59 @@
-import { useState } from "react";
+import { TextField } from "@fluentui/react/lib/TextField";
+import { Facepile } from "@fluentui/react/lib/Facepile";
+import {
+  CommandBarButton,
+  ActionButton,
+  IconButton,
+} from "@fluentui/react/lib/Button";
+import { Pivot, PivotItem } from "@fluentui/react/lib/Pivot";
+import { TagPicker, NormalPeoplePicker } from "@fluentui/react/lib/Pickers";
+import { Dropdown } from "@fluentui/react/lib/Dropdown";
 
-// import TextArea from "@atlaskit/textarea";
-// import Avatar from "@atlaskit/avatar";
-// import Button from "@atlaskit/button";
-// import Tabs, { Tab, TabList, TabPanel } from "@atlaskit/tabs";
-// import InlineEdit from "@atlaskit/inline-edit";
-// import Select from "@atlaskit/select";
-// import ADropdownMenu, {
-//   DropdownItem,
-//   DropdownItemGroup,
-// } from "@atlaskit/dropdown-menu";
+import { Label } from "@fluentui/react/lib/Label";
 
-// import Tag from "@atlaskit/tag";
-// import Group from "@atlaskit/tag-group";
+import { Icon } from "@fluentui/react/lib/Icon";
 
-// import FilterIcon from "@atlaskit/icon/glyph/filter";
-// import AttachmentIcon from "@atlaskit/icon/glyph/attachment";
-// import SubtaskIcon from "@atlaskit/icon/glyph/subtask";
-// import LinkIcon from "@atlaskit/icon/glyph/link";
-// import MoreIcon from "@atlaskit/icon/glyph/more";
-// import FeedbackIcon from "@atlaskit/icon/glyph/feedback";
-// import WatchIcon from "@atlaskit/icon/glyph/watch";
-// import ShareIcon from "@atlaskit/icon/glyph/share";
-// import LikeIcon from "@atlaskit/icon/glyph/like";
-// import EditorCloseIcon from "@atlaskit/icon/glyph/editor/close";
-// import SettingsIcon from "@atlaskit/icon/glyph/settings";
-// import HipchatChevronDoubleUpIcon from "@atlaskit/icon/glyph/hipchat/chevron-double-up";
-// import HipchatChevronUpIcon from "@atlaskit/icon/glyph/hipchat/chevron-up";
-// import HipchatChevronDownIcon from "@atlaskit/icon/glyph/hipchat/chevron-down";
-// import BitbucketBranchesIcon from "@atlaskit/icon/glyph/bitbucket/branches";
+import { ProgressIndicator } from "@fluentui/react/lib/ProgressIndicator";
 
-// import Story16Icon from "@atlaskit/icon-object/glyph/story/16";
-
-// import ProgressBar from "@atlaskit/progress-bar";
+import { ThemeProvider } from "@fluentui/react/lib/Theme";
 
 import Skeleton, { ActivityItem, Column, Flex } from "../Atlassian/Skeleton";
 import { labels, regions, states, users } from "../Atlassian/utils";
+
+const Button = ({ style, children, ...props }) => (
+  <CommandBarButton
+    style={{ padding: 10, ...style }}
+    text={children}
+    {...props}
+  />
+);
+
+const Tag = ({ style, ...props }) => (
+  <Label
+    style={{
+      backgroundColor: "lightgrey",
+      display: "inline",
+      padding: "0px 5px",
+      ...style,
+    }}
+    {...props}
+  />
+);
+
+const Avatar = () => (
+  <Facepile
+    personaSize={1}
+    personas={[{ imageInitials: "AV" }]}
+    ariaDescription="To move through the items use left and right arrow keys."
+    ariaLabel="Example list of Facepile personas"
+  />
+);
+
+const translateColor = (color) => {
+  if (color === "blue") return "#bee3f8";
+  if (color === "green") return "#c6f6d5";
+  return "#edf2f7";
+};
 
 const ActivityTabs = () => {
   const history = [
@@ -51,51 +69,22 @@ const ActivityTabs = () => {
   ];
   return (
     <Flex>
-      <Tabs
-        onChange={(index) => console.log("Selected Tab", index + 1)}
-        id="default"
-        defaultSelected={2}
+      <Pivot
+        style={{ width: "100%" }}
+        aria-label="Links of Tab Style Pivot Example"
+        linkFormat="tabs"
       >
-        <TabList>
-          <b style={{ display: "flex", alignItems: "center" }}>Show:</b>
-          <Tab>
-            <Button size="10">All</Button>
-          </Tab>
-          <Tab>
-            <Button size="10" isSelected>
-              Comments
-            </Button>
-          </Tab>
-          <Tab>
-            <Button size="10">History</Button>
-          </Tab>
-          <Tab>
-            <Button size="10">Work log</Button>
-          </Tab>
-          <Flex
-            style={{
-              display: "flex",
-              flex: 1,
-              alignItems: "center",
-              justifyContent: "flex-end",
-            }}
-          >
-            Newest first
-            <div style={{ cursor: "pointer" }}>
-              <FilterIcon />
-            </div>
-          </Flex>
-        </TabList>
-        <TabPanel>{/* This is for "Show:" element in TabList */}</TabPanel>
-        <TabPanel>One</TabPanel>
-        <TabPanel>
+        <PivotItem headerButtonProps={{}} headerText="All">
+          Pivot #1
+        </PivotItem>
+        <PivotItem headerText="Comments">
           <ActivityItem
             avatar={<Avatar />}
             content={
               <>
-                <TextArea
-                  maxHeight="40px"
-                  name="area"
+                <TextField
+                  multiline
+                  resizable={false}
                   placeholder="Add a comment..."
                   style={{ width: "100%" }}
                 />
@@ -105,17 +94,19 @@ const ActivityTabs = () => {
               </>
             }
           />
-        </TabPanel>
-        <TabPanel>
+        </PivotItem>
+        <PivotItem headerText="History">
           {history.map((item) => (
             <ActivityItem
+              key={item.action}
               avatar={<Avatar />}
               content={
                 <Column>
                   <Flex style={{ gap: 5 }}>
                     <strong>{item.name}</strong>
                     {item.action} the <strong>{item.subject}</strong>
-                    {item.time} <Tag color="grey" text={item.tag} />
+                    {item.time}
+                    <Tag children={item.tag} />
                   </Flex>
                   <div>
                     {item.from} -> {item.to}
@@ -124,169 +115,102 @@ const ActivityTabs = () => {
               }
             />
           ))}
-        </TabPanel>
-        <TabPanel>Four</TabPanel>
-      </Tabs>
+        </PivotItem>
+        <PivotItem headerText="Work log" he>
+          Pivot #4
+        </PivotItem>
+      </Pivot>
     </Flex>
   );
 };
 
 const DropdownMenu = ({ trigger, options }) => {
-  return (
-    <ADropdownMenu trigger={trigger}>
-      <DropdownItemGroup>
-        {options.map((option) => (
-          <DropdownItem key={option.value}>{option.label}</DropdownItem>
-        ))}
-      </DropdownItemGroup>
-    </ADropdownMenu>
-  );
-};
-
-const Priority = ({ color, text }) => {
-  const getIcon = (color) => {
-    if (color === "red") return HipchatChevronDoubleUpIcon;
-    if (color === "orange") return HipchatChevronUpIcon;
-    return HipchatChevronDownIcon;
+  const onRenderOption = (option) => {
+    return (
+      <Tag
+        style={{ backgroundColor: option.data.color }}
+        children={option.text}
+      />
+    );
   };
-
-  const Icon = getIcon(color);
   return (
-    <Flex style={{ alignItems: "center" }}>
-      <Icon primaryColor={color} />
-      {text}
-    </Flex>
+    <Dropdown
+      style={{ width: "100px", backgroundColor: translateColor() }}
+      placeholder={"Backlog"}
+      onRenderOption={onRenderOption}
+      options={options}
+    />
   );
 };
 
 const priorities = [
-  {
-    label: <Priority color="red" text="High" />,
-    value: <Priority color="red" text="High" />,
-  },
-  {
-    label: <Priority color="orange" text="Medium" />,
-    value: <Priority color="orange" text="Medium" />,
-  },
-  {
-    label: <Priority color="blue" text="Low" />,
-    value: <Priority color="blue" text="Low" />,
-  },
+  { label: "High", value: "High" },
+  { label: "Medium", value: "Medium" },
+  { label: "Low", value: "Low" },
 ];
 
-const InlineEditReadViewWrapper = ({ children }) => (
-  <div style={{ padding: "5px 10px" }}>{children}</div>
-);
-
-const MultiItemPicker = ({ selectOptions }) => {
-  const [editValue, setEditValue] = useState([]);
-
-  const onConfirm = (value) => {
-    if (!value) return;
-    setEditValue(value);
-  };
-
-  return (
-    <div style={{}}>
-      <InlineEdit
-        defaultValue={editValue}
-        editView={(fieldProps) => (
-          <div>
-            <Select
-              {...fieldProps}
-              options={selectOptions}
-              isMulti
-              autoFocus
-              openMenuOnFocus
-            />
-          </div>
-        )}
-        readView={() =>
-          editValue && editValue.length === 0 ? (
-            <InlineEditReadViewWrapper children="None" />
-          ) : (
-            <Group>
-              {editValue &&
-                editValue.map((option) => (
-                  <Tag text={option.label} key={option.label} />
-                ))}
-            </Group>
-          )
-        }
-        onConfirm={onConfirm}
-      />
-    </div>
-  );
-};
-
-const SingleItemPicker = ({ selectOptions }) => {
-  const [editValue, setEditValue] = useState("");
-
-  const onConfirm = (value) => {
-    if (!value) return;
-    setEditValue(value.value);
-  };
-
-  return (
-    <div style={{}}>
-      <InlineEdit
-        defaultValue={editValue}
-        hideActionButtons
-        editView={(fieldProps) => (
-          <div>
-            <Select
-              {...fieldProps}
-              options={selectOptions}
-              autoFocus
-              openMenuOnFocus
-              blurInputOnSelect
-            />
-          </div>
-        )}
-        readView={() =>
-          editValue ? (
-            <InlineEditReadViewWrapper children={editValue} />
-          ) : (
-            <InlineEditReadViewWrapper children="None" />
-          )
-        }
-        onConfirm={onConfirm}
-      />
-    </div>
-  );
-};
+const onResolveSuggestionsText = (items) => () => items.map((i) => ({ text: i.value }))
+const onResolveSuggestionsName = (items) => () => items.map((i) => ({ name: i.value }))
 
 const detailsFields = [
-  { value: "Approvers", label: <MultiItemPicker selectOptions={users} /> },
-  { value: "Assignee", label: <SingleItemPicker selectOptions={users} /> },
-  { value: "Reporter", label: <SingleItemPicker selectOptions={users} /> },
+  {
+    value: "Approvers",
+    label: (
+      <NormalPeoplePicker onResolveSuggestions={onResolveSuggestionsText(users)} />
+    ),
+  },
+  {
+    value: "Assignee",
+    label: (
+      <NormalPeoplePicker onResolveSuggestions={onResolveSuggestionsText(users)} />
+    ),
+  },
+  {
+    value: "Reporter",
+    label: (
+      <NormalPeoplePicker onResolveSuggestions={onResolveSuggestionsText(users)} />
+    ),
+  },
   {
     value: "Development",
     label: (
-      <Button style={{ textAlign: "center" }} appearance="link">
-        <Flex style={{ alignItems: "center" }}>
-          <BitbucketBranchesIcon /> Development
-        </Flex>
-      </Button>
+      <ActionButton iconProps={{ iconName: "BranchFork2" }} allowDisabledFocus>
+        Development
+      </ActionButton>
     ),
   },
-  { value: "Labels", label: <MultiItemPicker selectOptions={labels} /> },
-  { value: "Region", label: <SingleItemPicker selectOptions={regions} /> },
-  { value: "Checkbox", label: <Tag isRemovable={false} text="first" /> },
-  { value: "Priority", label: <SingleItemPicker selectOptions={priorities} /> },
+  {
+    value: "Labels",
+    label: (
+      <TagPicker onResolveSuggestions={onResolveSuggestionsName(labels)} />
+    ),
+  },
+  {
+    value: "Region",
+    label: (
+      <TagPicker onResolveSuggestions={onResolveSuggestionsName(regions)} />
+    ),
+  },
+  { value: "Checkbox", label: <Tag children="first" /> },
+  {
+    value: "Priority",
+    label: (
+      <TagPicker onResolveSuggestions={onResolveSuggestionsName(priorities)} />
+    ),
+  },
 ];
 
 const moreFields = [
-  { value: "Points", label: <Tag isRemovable={false} text={3} /> },
+  { value: "Points", label: <Tag children={3} /> },
   {
     value: "Tracking",
     label: (
       <div>
-        <ProgressBar value={0} /> <span children="No time logged" />
+        <ProgressIndicator label="No time logged" percentComplete={0} />
       </div>
     ),
   },
-  { value: "Estimate", label: <Tag isRemovable={false} text={6} /> },
+  { value: "Estimate", label: <Tag children={6} /> },
 ];
 
 const Microsoft = () => {
@@ -295,50 +219,49 @@ const Microsoft = () => {
       <Skeleton
         activityTabs={<ActivityTabs />}
         attachButton={
-          <Button iconBefore={<AttachmentIcon />} children="Attach" />
+          <Button iconProps={{ iconName: "Attach" }} children="Attach" />
         }
         createSubtaskButton={
-          <Button iconBefore={<SubtaskIcon />} children="Create subtask" />
+          <Button
+            iconProps={{ iconName: "Boards" }}
+            children="Create subtask"
+          />
         }
         linkIssueButton={
-          <>
-            <Button
-              style={{ borderRight: "1px solid lightgray" }}
-              iconBefore={<LinkIcon />}
-              children="Link issue"
-            />
-            <DropdownMenu
-              trigger=""
-              options={[{ label: "issue1", value: "issue1" }]}
-            />
-          </>
+          <Button
+            menuProps={{
+              items: [
+                { key: "1", text: "Issue 1", iconProps: { iconName: "NumberField" }, },
+              ],
+            }}
+            iconProps={{ iconName: "Link" }}
+            children="Link issue"
+          />
         }
-        moreButton={<Button iconBefore={<MoreIcon />} />}
-        headerIcon={<Story16Icon />}
+        moreButton={<Button iconProps={{ iconName: "More" }} />}
+        headerIcon={
+          <Button
+            iconProps={{ iconName: "SingleBookmark" }}
+            style={{ backgroundColor: "lightgreen", padding: 5 }}
+          />
+        }
         metaActionsFeedback={
           <Button
-            appearance="subtle"
-            iconBefore={<FeedbackIcon />}
+            iconProps={{ iconName: "MegaphoneSolid" }}
             children="Give feedback"
           />
         }
         metaActionsWatch={
-          <Button appearance="subtle" iconBefore={<WatchIcon />} children="1" />
+          <Button iconProps={{ iconName: "RedEye" }} children="1" />
         }
-        metaActionsLike={
-          <Button appearance="subtle" iconBefore={<LikeIcon />} />
-        }
-        metaActionsShare={
-          <Button appearance="subtle" iconBefore={<ShareIcon />} />
-        }
-        metaActionsMore={
-          <Button appearance="subtle" iconBefore={<MoreIcon />} />
-        }
+        metaActionsLike={<IconButton iconProps={{ iconName: "Like" }} />}
+        metaActionsShare={<IconButton iconProps={{ iconName: "Share" }} />}
+        metaActionsMore={<IconButton iconProps={{ iconName: "More" }} />}
         metaActionsClose={
-          <Button appearance="subtle" iconBefore={<EditorCloseIcon />} />
+          <IconButton iconProps={{ iconName: "ChromeClose" }} />
         }
         descriptionTextArea={
-          <TextArea
+          <TextField
             placeholder="Text issue description"
             style={{ width: "100%" }}
           />
@@ -347,12 +270,12 @@ const Microsoft = () => {
           <DropdownMenu
             trigger="Backlog"
             options={states.map((s) => ({
-              ...s,
-              label: <Tag isRemovable={false} color={s.color} text={s.label} />,
+              text: s.label,
+              data: { color: translateColor(s.color) },
             }))}
           />
         }
-        configureIcon={<SettingsIcon />}
+        configureIcon={<Icon iconName="Settings" />}
         detailsFields={detailsFields}
         moreFields={moreFields}
       />
@@ -360,4 +283,10 @@ const Microsoft = () => {
   );
 };
 
-export {Microsoft};
+const PRIMARY_GREY = "#42526e";
+const theme = { palette: { themePrimary: PRIMARY_GREY } };
+const MicrosoftWithThemeProvider = () => (
+  <ThemeProvider theme={theme} children={<Microsoft />} />
+);
+
+export { MicrosoftWithThemeProvider as Microsoft };
