@@ -58,12 +58,9 @@ const FeedbackActions = () => {
             <Box>
                 <Menu>
                     <MenuButton as={Button} bg="inherit" p="0" >
-                        <IconButton
-                            variant="ghost"
-                            colorScheme="gray"
-                            aria-label="Call Sage"
-                            icon={<BsThreeDots />}
-                        />
+                        <Flex justifyContent="center">
+                            <BsThreeDots />
+                        </Flex> 
                     </MenuButton>
                     <MenuList>
                         <MenuItem>

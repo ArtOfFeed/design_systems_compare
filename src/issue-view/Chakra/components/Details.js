@@ -11,7 +11,7 @@ import { AiOutlineBranches } from 'react-icons/ai';
 const Details = () => {
     return (
         <Wrap>
-            <Box border="1px solid lightgrey" borderTop="none" borderBottom="none" borderRadius="4px" mb="10px" w="100%">
+            <Box border="1px solid lightgrey" borderBottom="none" borderRadius="4px" mb="10px" w="100%">
                 <Accordion defaultIndex={[0]} allowMultiple>
                     <AccordionItem>
                         <Heading as="h2" borderBottom="1px solid lightgray">
@@ -101,7 +101,7 @@ const Details = () => {
                                 </Flex>
                                 <Flex w="100%" alignItems="center">
                                     <Text w="37%">Development</Text>
-                                    <Flex w="63%" h="40px" _hover={{bg: "rgb(235, 236, 240)", borderRadius: "5px"}} p="5px" _focus={{boxShadow: "none !important"}}>
+                                    <Flex w="63%" h="40px" _hover={{bg: "hover.gray", borderRadius: "5px"}} p="5px" _focus={{boxShadow: "none !important"}}>
                                         <Button variant="link" w="100%" display="flex" justifyContent="flex-start">
                                             <AiOutlineBranches />
                                             <Link pl="5px" color="#0065FF">Create branch</Link>
@@ -147,7 +147,7 @@ const Details = () => {
                                 </Flex>
                                 <Flex w="100%" alignItems="center">
                                     <Text w="37%">Priority</Text>
-                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "rgb(235, 236, 240)"}}>
+                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "hover.gray"}}>
                                         <option value="option1">
                                             Medium
                                         </option>
@@ -162,7 +162,7 @@ const Details = () => {
                     </AccordionItem>
                 </Accordion>
             </Box>
-            <Box w="100%" border="1px solid lightgrey" borderTop="none" borderBottom="none" borderRadius="4px">
+            <Box w="100%" border="1px solid lightgrey" borderBottom="none" borderRadius="4px">
                 <Accordion allowMultiple>
                     <AccordionItem>
                         <Heading as="h2" borderBottom="1px solid lightgray">
