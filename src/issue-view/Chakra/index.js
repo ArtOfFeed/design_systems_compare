@@ -1,4 +1,5 @@
 import React from 'react';
+import Toggle from './components/Toggle';
 import Actions from './components/Actions';
 import Details from './components/Details';
 import Activity from './components/Activity';
@@ -20,6 +21,9 @@ export const Chakra = () => {
 
     return (
         <ChakraProvider theme={theme}>
+            <Box position="absolute" bottom="10px" left="10px">
+                <Toggle />
+            </Box>
             <Container maxW="container.xl">
                 <Flex m="20px">
                     <Box w="60%" fontSize="14px">

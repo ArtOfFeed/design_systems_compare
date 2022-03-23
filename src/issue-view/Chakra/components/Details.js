@@ -11,7 +11,7 @@ import { AiOutlineBranches } from 'react-icons/ai';
 const Details = () => {
     return (
         <Wrap>
-            <Box border="1px solid lightgrey" borderTop="none" borderBottom="none" borderRadius="4px" mb="10px" w="100%">
+            <Box border="1px solid lightgrey" borderBottom="none" borderRadius="4px" mb="10px" w="100%">
                 <Accordion defaultIndex={[0]} allowMultiple>
                     <AccordionItem>
                         <Heading as="h2" borderBottom="1px solid lightgray">
@@ -162,7 +162,7 @@ const Details = () => {
                     </AccordionItem>
                 </Accordion>
             </Box>
-            <Box w="100%" border="1px solid lightgrey" borderTop="none" borderBottom="none" borderRadius="4px">
+            <Box w="100%" border="1px solid lightgrey" borderBottom="none" borderRadius="4px">
                 <Accordion allowMultiple>
                     <AccordionItem>
                         <Heading as="h2" borderBottom="1px solid lightgray">
