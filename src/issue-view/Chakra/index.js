@@ -21,7 +21,7 @@ export const Chakra = () => {
 
     return (
         <ChakraProvider theme={theme}>
-            <Box position="absolute" bottom="10px" left="10px">
+            <Box>
                 <Toggle />
             </Box>
             <Container maxW="container.xl">
