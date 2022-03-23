@@ -12,7 +12,7 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@adobe/react-spectrum-workflow/-/react-spectrum-workflow-1.0.2.tgz#382d81df6b3df7c15247d847cc1d483a6e8f6aaf"
   integrity sha512-4phKdzoH7sPqlIX4kFQNZ8oXRZ4tupBkUoWZq1hRaN551fh8Ne/+Kt/IXyouZWWddLBcUncU2EqdHKInWrtNWw==
 
-"@adobe/react-spectrum@^3.16.5":
+"@adobe/react-spectrum@^3.6.3":
   version "3.16.5"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@adobe/react-spectrum/-/react-spectrum-3.16.5.tgz#147fe043a5fb4232492ab4e3f5cc96a63308bd51"
   integrity sha512-DGn8HWfsFmJAxiZ65wVIJTvwjnTBGkDb3hwCDT72ZpEitvQdptme/8m+CR+YnXtq0zj97VhzwHvLYxcqf/JEig==
@@ -8927,7 +8927,7 @@ lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/loose-envify/-/loose-envify-1.4.0.tgz"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
@@ -9211,7 +9211,7 @@ nwsapi@^2.2.0:
 
 object-assign@^4.1.1:
   version "4.1.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/object-assign/-/object-assign-4.1.1.tgz"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 object-hash@^2.2.0:
@@ -10318,7 +10318,7 @@ react-input-autosize@^3.0.0:
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/react-is/-/react-is-16.13.1.tgz"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-is@^17.0.1:
@@ -10553,7 +10553,7 @@ regenerate@^1.4.2:
 
 regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
   version "0.13.9"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regenerator-transform@^0.14.2:
