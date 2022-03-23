@@ -21,10 +21,10 @@ export const Chakra = () => {
 
     return (
         <ChakraProvider theme={theme}>
-            <Box>
-                <Toggle />
-            </Box>
             <Container maxW="container.xl">
+                <Box ml="15px">
+                    <Toggle />
+                </Box>
                 <Flex m="20px">
                     <Box w="60%" fontSize="14px">
                         <Box display="flex" alignItems="center" mb="25px" pl="5px">
