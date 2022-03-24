@@ -24,120 +24,120 @@ const Details = () => {
                         </Heading>
                         <AccordionPanel p="8px 12px">
                             <VStack>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="37%">Approvers</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}} mb={{sm: "10px"}}>Approvers</Text>
                                     <Menu>
                                         <MenuButton w="63%" as={Button} bg="inherit">
-                                            <Flex alignItems="center" flexDirection="flex-start">
+                                            <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                 <Avatar w="30px" h="30px" mr="5px" bg="black" />
-                                                <Box as="span" pl="5px">Charlie 2</Box>
+                                                <Box as="span" pl="5px" fontSize={{sm: '13px'}}>Charlie 2</Box>
                                             </Flex>
                                         </MenuButton>
                                         <MenuList>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="blue" />
-                                                    <Box as="span" pl="5px">Charlie 1</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 1</Box>
                                                 </Flex>
                                             </MenuItem>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="green" />
-                                                    <Box as="span" pl="5px">Charlie 3</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 3</Box>
                                                 </Flex>
                                             </MenuItem>
                                         </MenuList>
                                     </Menu>
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="37%">Assignee</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px !important", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}} mb={{sm: "10px"}}>Assignee</Text>
                                     <Menu>
                                         <MenuButton w="63%" as={Button} bg="inherit">
-                                            <Flex alignItems="center" flexDirection="flex-start">
+                                            <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                 <Avatar w="30px" h="30px" mr="5px" bg="black" />
-                                                <Box as="span" pl="5px">Charlie 2</Box>
+                                                <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 2</Box>
                                             </Flex>
                                         </MenuButton>
                                         <MenuList>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="blue" />
-                                                    <Box as="span" pl="5px">Charlie 1</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 1</Box>
                                                 </Flex>
                                             </MenuItem>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="green" />
-                                                    <Box as="span" pl="5px">Charlie 3</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 3</Box>
                                                 </Flex>
                                             </MenuItem>
                                         </MenuList>
                                     </Menu>
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                <Text w="37%">Reporter</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px !important", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}} mb={{sm: "10px"}}>Reporter</Text>
                                     <Menu>
                                         <MenuButton w="63%" as={Button} bg="inherit">
-                                            <Flex alignItems="center" flexDirection="flex-start">
+                                            <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                 <Avatar w="30px" h="30px" mr="5px" bg="black" />
-                                                <Box as="span" pl="5px">Charlie 2</Box>
+                                                <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 2</Box>
                                             </Flex>
                                         </MenuButton>
                                         <MenuList>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="blue" />
-                                                    <Box as="span" pl="5px">Charlie 1</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 1</Box>
                                                 </Flex>
                                             </MenuItem>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center" flexDirection={{sm: "column", md: "row"}}>
                                                     <Avatar w="30px" h="30px" mr="5px" bg="green" />
-                                                    <Box as="span" pl="5px">Charlie 3</Box>
+                                                    <Box as="span" pl="5px" fontSize={{sm: "13px"}}>Charlie 3</Box>
                                                 </Flex>
                                             </MenuItem>
                                         </MenuList>
                                     </Menu>
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="37%">Development</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Development</Text>
                                     <Flex w="63%" h="40px" _hover={{bg: "hover.gray", borderRadius: "5px"}} p="5px" _focus={{boxShadow: "none !important"}}>
-                                        <Button variant="link" w="100%" display="flex" justifyContent="flex-start">
+                                        <Button variant="link" w="100%" display="flex" justifyContent={{sm: "center", md: "flex-start"}}>
                                             <AiOutlineBranches />
-                                            <Link pl="5px" color="#0065FF">Create branch</Link>
+                                            <Link pl="5px" color="#0065FF" fontSize={{sm: "13px"}}>Create branch</Link>
                                         </Button>
                                     </Flex>
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="60%">Labels</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="60%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Labels</Text>
                                     <Input placeholder="None" />
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="60%">Region and Country</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="60%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Region and Country</Text>
                                     <Input placeholder="None" />
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="60%">Required checkbox</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="60%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Required checkbox</Text>
                                     <Input placeholder="None" />
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="37%">Priority</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Priority</Text>
                                     <Menu>
                                         <MenuButton w="63%" as={Button} bg="inherit">
-                                            <Flex alignItems="center" flexDirection="flex-start">
+                                            <Flex alignItems="center" justifyContent={{sm: "center", md: "flex-start"}}>
                                                 <FcMediumPriority />
-                                                <Box as="span" pl="10px">Medium</Box>
+                                                <Box as="span" pl="10px" fontSize={{sm: "13px"}}>Medium</Box>
                                             </Flex>
                                         </MenuButton>
                                         <MenuList>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center">
                                                     <FcLowPriority />
                                                     <Box as="span" pl="10px">Low</Box>
                                                 </Flex>
                                             </MenuItem>
                                             <MenuItem>
-                                                <Flex alignItems="center" flexDirection="flex-start">
+                                                <Flex alignItems="center">
                                                     <FcHighPriority />
                                                     <Box as="span" pl="10px">High</Box>
                                                 </Flex>
@@ -145,9 +145,9 @@ const Details = () => {
                                         </MenuList>
                                     </Menu>
                                 </Flex>
-                                <Flex w="100%" alignItems="center">
-                                    <Text w="37%">Priority</Text>
-                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "hover.gray"}}>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Priority</Text>
+                                    <Select w="63%" height="40px" placeholder="Select option" variant="unstyled" cursor="pointer" _hover={{bg: "hover.gray"}} fontSize={{sm: "13px"}}>
                                         <option value="option1">
                                             Medium
                                         </option>
@@ -175,8 +175,8 @@ const Details = () => {
                         </Heading>
                         <AccordionPanel p="8px 12px">
                             <VStack>
-                                <Flex w="100%" h="40px" alignItems="center">
-                                    <Text w="37%">Story points</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="37%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Story points</Text>
                                     <NumberInput min={0} w="63%">
                                         <NumberInputField id="amount" />
                                         <NumberInputStepper>
@@ -185,12 +185,12 @@ const Details = () => {
                                         </NumberInputStepper>
                                     </NumberInput>
                                 </Flex>
-                                <Flex w="100%" h="40px" alignItems="center">
-                                    <Text w="60%">Original estimate</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="60%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Original estimate</Text>
                                     <Input placeholder="None" />
                                 </Flex>
-                                <Flex w="100%" h="40px" alignItems="center">
-                                    <Text w="38%">Time tracking</Text>
+                                <Flex w="100%" alignItems="center" flexDirection={{sm: "column", md: "row"}} mb={{sm: "10px", md: "0"}}>
+                                    <Text w="38%" textAlign={{sm: "center", md: "left"}} mb={{sm: "10px"}} fontSize={{sm: "13px"}} fontWeight={{sm: "medium"}}>Time tracking</Text>
                                     <Progress w="62%" value={20} size="xs" colorScheme="gray" />
                                 </Flex>
                             </VStack>
