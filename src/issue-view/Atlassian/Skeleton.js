@@ -109,6 +109,8 @@ export const Activity = ({
   );
 };
 
+export const ThemeWrapper = ({style,children}) => <div style={{maxWidth: 1200, margin: 'auto', ...style} } >{children}</div>
+
 const Skeleton = ({
   activityTabs = "[ tabs ]",
   attachButton = "[ attach ]",
@@ -130,8 +132,9 @@ const Skeleton = ({
   moreFields = [],
 }) => {
   return (
+    <ThemeWrapper>
     <div style={{ padding: "20px 60px" }}>
-      <Column style={{ maxWidth: 1000, margin: "auto" }}>
+      <Column>
         <Flex style={{ justifyContent: "space-between", paddingBottom: 20 }}>
           <div>{headerIcon} DP-9</div>
           <Flex style={{ gap: 5 }}>
@@ -197,6 +200,7 @@ const Skeleton = ({
         </Flex>
       </Column>
     </div>
+    </ThemeWrapper>
   );
 };
 
