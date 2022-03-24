@@ -14,16 +14,16 @@ const Activity = () => {
             </Box>
             <Box mt="10px" w="100%">
                 <Tabs variant="soft-rounded" colorScheme="telegram" display="flex" alignItems="center" flexDirection="column" w="100%" defaultIndex={1}>
-                    <TabList h="20px" display="flex" w="100%">
-                        <Box display="flex" justifyContent="space-between">
-                            <Box as="span" mr="10px" fontWeight="medium">Show:</Box>
-                            <Tab bg="lightgray" mr="7px">All</Tab>
-                            <Tab bg="lightgray" mr="7px">Comments</Tab>
-                            <Tab bg="lightgray" mr="7px">History</Tab>
-                            <Tab bg="lightgray" mr="7px">Work log</Tab>
+                    <TabList w="100%" display="flex" h={{sm: "100%", md: "100%", lg: "20px"}} flexDirection={{sm: "column", md: "column", lg: "row"}}>
+                        <Box display="flex" justifyContent="space-between" flexDirection={{sm: "column", md: "column", lg: "row"}}>
+                            <Box as="span" mr="10px" fontWeight="medium" mb={{sm: "10px", md: "10px", lg: 0}}>Show:</Box>
+                            <Tab bg="lightgray" mr="7px" mb={{sm: "10px", md: "10px", lg: 0}}>All</Tab>
+                            <Tab bg="lightgray" mr="7px" mb={{sm: "10px", md: "10px", lg: 0}}>Comments</Tab>
+                            <Tab bg="lightgray" mr="7px" mb={{sm: "10px", md: "10px", lg: 0}}>History</Tab>
+                            <Tab bg="lightgray" mr="7px" mb={{sm: "10px", md: "10px", lg: 0}}>Work log</Tab>
                         </Box>
                         <Spacer />
-                        <Box display="flex" alignItems="center">
+                        <Flex alignItems="center">
                             <IconButton
                                 variant="ghost"
                                 colorScheme="gray"
@@ -37,7 +37,7 @@ const Activity = () => {
                                     </Flex>
                                 }
                             />
-                        </Box>
+                        </Flex>
                     </TabList>
                     <TabPanels>
                         <TabPanel p="0">

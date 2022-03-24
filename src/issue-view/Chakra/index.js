@@ -17,6 +17,13 @@ export const Chakra = () => {
             gray: "rgb(235, 236, 240)"
           },
         },
+        breakpoints: {
+            sm: '320px',
+            md: '768px',
+            lg: '960px',
+            xl: '1200px',
+            '2xl': '1536px',
+        }
     });
 
     return (
@@ -27,10 +34,10 @@ export const Chakra = () => {
                 </Box>
                 <Flex m="20px">
                     <Box w="60%" fontSize="14px">
-                        <Box display="flex" alignItems="center" mb="25px" pl="5px">
+                        <Flex alignItems="center" mb="25px" pl="5px">
                             <MoonIcon pr="5px"/>
                             <Text>DP-9</Text>
-                        </Box>
+                        </Flex>
                         <Heading as="h1" size="lg" mb="20px" textAlign="start">Test issue</Heading>
                         <Actions />
                         <Description />
