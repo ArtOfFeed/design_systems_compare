@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Input, Button, ButtonGroup, Box, Menu, MenuButton, MenuList, MenuItem, Text, IconButton } from '@chakra-ui/react';
+import { Flex, Input, Button, ButtonGroup, Box, Menu, MenuButton, MenuList, MenuItem, Text, Center } from '@chakra-ui/react';
 import { AttachmentIcon, LinkIcon, ChevronDownIcon, AddIcon } from '@chakra-ui/icons';
 import { BsThreeDots } from 'react-icons/bs';
 import { RiTaskLine } from 'react-icons/ri';
@@ -10,70 +10,49 @@ import { CgNotes } from 'react-icons/cg';
 const Actions = () => {
     return (
         <Flex alignItems="center">
-            <ButtonGroup>
-                <Button>
+            <ButtonGroup flexDirection={{sm: "column", md: "column", lg: "row"}}>
+                <Button mb={{sm: "10px", md: "10px"}} ml={{sm: "10px", md: "10px", lg: "0"}}>
                     <Input type="file" id="attach" display="none"></Input>
                     <AttachmentIcon />
-                    <Box as="label" for="attach" pl="5px" cursor="pointer">Attach</Box>
+                    <Box as="label" htmlFor="attach" pl="5px" cursor="pointer">Attach</Box>
                 </Button>
-                <Button>
+                <Button mb={{sm: "10px", md: "10px"}}>
                     <RiTaskLine />
                     <Box as="span" pl="5px">Create subtask</Box>
                 </Button>
-                <Button borderRightRadius="0" borderRight="1px solid lightgray">
+                <Button borderRightRadius={{lg: "0"}} borderRight={{sm: 0, md: 0, lg: "1px solid lightgray"}}>
                     <LinkIcon />
                     <Box as="span" pl="5px">Link issue</Box>
                 </Button>
                 <Menu>
-                    <MenuButton ml="0 !important" borderLeftRadius="0" as={Button} >
+                    <MenuButton ml={{lg: "0 !important"}} borderLeftRadius={{lg: "0"}} as={Button} mb={{sm: "10px", md: "10px"}}>
                         <ChevronDownIcon />
                     </MenuButton>
                     <MenuList>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex>
-                                        <CgNotes />
-                                        <Text pl="8px" fontWeight="medium" fontSize="14px">Link Confluence page</Text>
-                                    </Flex>
-                                }
-                            />
+                            <CgNotes />
+                            <Text pl="8px" fontWeight="medium" fontSize="14px">Link Confluence page</Text>
                         </MenuItem>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex>
-                                        <BiWorld />
-                                        <Text pl="8px" fontWeight="medium" fontSize="14px">Add web link</Text>
-                                    </Flex>
-                                }
-                            />
+                            <Flex alignItems="center">
+                                <BiWorld />
+                                <Text pl="8px" fontWeight="medium" fontSize="14px">Add web link</Text>
+                            </Flex>
                         </MenuItem>
                     </MenuList>
                 </Menu>
                 <Menu>
-                    <MenuButton as={Button} >
-                        <BsThreeDots />
+                    <MenuButton as={Button}>
+                        <Center>
+                            <BsThreeDots />
+                        </Center>
                     </MenuButton>
                     <MenuList>
                         <MenuItem>
-                            <IconButton
-                                variant="ghost"
-                                colorScheme="gray"
-                                aria-label="Call Sage"
-                                icon={
-                                    <Flex p="8px">
-                                        <AddIcon />
-                                        <Text pl="5px" fontWeight="medium" fontSize="14px">Add apps</Text>
-                                    </Flex>
-                                }
-                            />
+                            <Flex p="8px" alignItems="center">
+                                <AddIcon />
+                                <Text pl="8px" fontWeight="medium" fontSize="14px">Add apps</Text>
+                            </Flex>
                         </MenuItem>
                     </MenuList>
                 </Menu>

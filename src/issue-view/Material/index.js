@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Box,Typography } from '@mui/material';
 import IssueHeader from './components/IssueHeader/IssueHeader'; 
 import IssueContent from './components/issueContent';
@@ -24,3 +25,6 @@ export const Material = () => {
         </div>
          )
     }
+=======
+export const Material = () => <h2 className="secondary-heading">Material</h2>
+>>>>>>> db6caccee04b0c610868b8ada2b0773adb053269

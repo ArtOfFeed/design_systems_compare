@@ -12,7 +12,7 @@ const App = () => {
   return (
     <BrowserRouter>
         <h1 className="main-heading">Design System Comparison</h1>
-        <nav>
+        <nav className="navigation">
           <ul>
             <NavLink to="/">Home</NavLink>
             <NavLink to="atlassian">Atlassian Design System</NavLink>
