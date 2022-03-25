@@ -1,0 +1,5 @@
+.iconsGroup:hover {
+    color:black;
+    transition: 0.5s;
+    cursor: pointer;
+}
