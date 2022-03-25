@@ -49,10 +49,19 @@ export const Adobe = () => {
     return (
         <Provider theme={defaultTheme} colorScheme={ mode ? 'dark' : 'light' }>
             <Grid
-                areas={[
-                    'content sidebar',
-                ]}
-                columns={['2fr', '1fr']}
+                width={{ base: "100%", M: "1200px" }}
+                margin="auto"
+                areas={{
+                    base: [
+                        'content content',
+                        'sidebar sidebar'
+                    ],
+                    M: ['content sidebar',]
+                }}
+                columns={{
+                    base: ['1fr', '1fr'],
+                    M: ['2fr', '1fr'],
+                }}
                 gap="size-100">
                 <View gridArea="content" marginBottom="size-400">
                     <Content marginStart="size-400" marginEnd="size-400">
