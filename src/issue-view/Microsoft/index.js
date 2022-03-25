@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { TextField } from "@fluentui/react/lib/TextField";
 import { Facepile } from "@fluentui/react/lib/Facepile";
 import {
@@ -8,6 +9,7 @@ import {
 import { Pivot, PivotItem } from "@fluentui/react/lib/Pivot";
 import { TagPicker, NormalPeoplePicker } from "@fluentui/react/lib/Pickers";
 import { Dropdown } from "@fluentui/react/lib/Dropdown";
+import { Toggle } from "@fluentui/react";
 
 import { Label } from "@fluentui/react/lib/Label";
 
@@ -15,10 +17,10 @@ import { Icon } from "@fluentui/react/lib/Icon";
 
 import { ProgressIndicator } from "@fluentui/react/lib/ProgressIndicator";
 
-import { ThemeProvider } from "@fluentui/react/lib/Theme";
+import { ThemeProvider, createTheme } from "@fluentui/react/lib/Theme";
 
-import Skeleton, { ActivityItem, Column, Flex } from "../Atlassian/Skeleton";
-import { labels, regions, states, users } from "../Atlassian/utils";
+import Skeleton, { ActivityItem, Column, Flex, ThemeWrapper } from "../Atlassian/Skeleton";
+import { labels, fluentLightTheme, fluentDarkTheme, regions, states, users, THEMES } from "../Atlassian/utils";
 
 const Button = ({ style, children, ...props }) => (
   <CommandBarButton
@@ -283,10 +285,17 @@ const Microsoft = () => {
   );
 };
 
-const PRIMARY_GREY = "#42526e";
-const theme = { palette: { themePrimary: PRIMARY_GREY } };
-const MicrosoftWithThemeProvider = () => (
-  <ThemeProvider theme={theme} children={<Microsoft />} />
-);
+const ThemedMicrosoft = () => {
+  const [theme, setTheme] = useState(THEMES.light);
+  const toggleTheme = () => setTheme(theme === THEMES.light ? THEMES.dark : THEMES.light)
 
-export { MicrosoftWithThemeProvider as Microsoft };
+  return (
+    <ThemeWrapper>
+      <Toggle inlineLabel label="light" onText="dark" offText="dark" onChange={toggleTheme} />
+      <ThemeProvider theme={createTheme(theme === THEMES.dark ? fluentDarkTheme : fluentLightTheme)} >
+        <Microsoft />
+      </ThemeProvider>
+    </ThemeWrapper>)
+}
+
+export { ThemedMicrosoft as Microsoft };
