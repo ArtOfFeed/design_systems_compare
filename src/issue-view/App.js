@@ -7,7 +7,6 @@ import {Material} from './Material';
 import {Chakra} from './Chakra';
 import {Braid} from './Braid';
 import './App.css';
-import { CarbonDesignNavigation } from "./Carbon";
 
 const App = () => {
   return (
@@ -22,7 +21,6 @@ const App = () => {
             <NavLink to="material">MUI</NavLink>
             <NavLink to="chakra">Chakra UI</NavLink>
             <NavLink to="braid">Braid</NavLink>
-            <NavLink to="carbon">Carbon</NavLink>
           </ul>
         </nav>
         <Routes>
@@ -34,7 +32,6 @@ const App = () => {
             <Route path={'/chakra'} exact element={<Chakra />} />
             <Route path={'/braid'} exact element={<Braid />} />
         </Routes>
-        <CarbonDesignNavigation />
     </BrowserRouter>
   );
 }
