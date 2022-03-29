@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { 
-    Button,
     defaultTheme,
     Provider,
     Grid,
@@ -29,7 +28,6 @@ import BookmarkSingle from '@spectrum-icons/workflow/BookmarkSingle';
 import Attach from '@spectrum-icons/workflow/Attach';
 import Light from '@spectrum-icons/workflow/Light';
 import Moon from '@spectrum-icons/workflow/Moon';
-import Link from '@spectrum-icons/workflow/Link';
 import User from '@spectrum-icons/workflow/User';
 import ShareAndroid from '@spectrum-icons/workflow/ShareAndroid';
 import ThumbUp from '@spectrum-icons/workflow/ThumbUp';

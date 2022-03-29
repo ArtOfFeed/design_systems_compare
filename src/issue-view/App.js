@@ -3,6 +3,8 @@ import {Home} from './Home';
 import {Atlassian} from './Atlassian';
 import {Adobe} from './Adobe';
 import {Microsoft} from './Microsoft';
+import {MicrosoftIssue} from './Microsoft/pages/issue-view';
+import {MicrosoftAutomation} from './Microsoft/pages/automation';
 import {Material} from './Material';
 import {Chakra} from './Chakra';
 import {Braid} from './Braid';
@@ -31,6 +33,8 @@ const App = () => {
             <Route path={'/material'} exact element={<Material />} />
             <Route path={'/chakra'} exact element={<Chakra />} />
             <Route path={'/braid'} exact element={<Braid />} />
+            <Route path={'/microsoft/issue'} exact element={<MicrosoftIssue />} />
+            <Route path={'/microsoft/automation'} exact element={<MicrosoftAutomation />} />
         </Routes>
     </BrowserRouter>
   );
