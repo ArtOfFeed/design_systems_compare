@@ -1,7 +1,9 @@
 import React from "react";
 
-export const CarbonDesignAutomationView = () => {
+const CarbonDesignAutomationView = () => {
     return (<div>
         CarbonDesignAutomationView
     </div>)
 }
+
+export default CarbonDesignAutomationView;
