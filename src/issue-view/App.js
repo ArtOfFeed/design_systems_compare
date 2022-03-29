@@ -9,6 +9,7 @@ import {Material} from './Material';
 import {Chakra} from './Chakra';
 import {Braid} from './Braid';
 import './App.css';
+import { CarbonDesignNavigation } from "./Carbon";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <NavLink to="material">MUI</NavLink>
             <NavLink to="chakra">Chakra UI</NavLink>
             <NavLink to="braid">Braid</NavLink>
+            <NavLink to="carbon">Carbon</NavLink>
           </ul>
         </nav>
         <Routes>
@@ -36,6 +38,7 @@ const App = () => {
             <Route path={'/microsoft/issue'} exact element={<MicrosoftIssue />} />
             <Route path={'/microsoft/automation'} exact element={<MicrosoftAutomation />} />
         </Routes>
+        <CarbonDesignNavigation />
     </BrowserRouter>
   );
 }
