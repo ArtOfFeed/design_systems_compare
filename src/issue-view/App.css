@@ -8,6 +8,11 @@ nav.navigation {
   padding: 40px 0;
 }
 
+nav.sub-navigation {
+  padding: 0 auto;
+  margin: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
