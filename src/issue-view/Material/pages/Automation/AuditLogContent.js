@@ -75,7 +75,7 @@ export const AuditLogContent = () => {
                                 <TableCell>
                                     <Grid container sx={{alignItems: "center"}}>
                                         <Grid item sx={{pr: "10px"}}>
-                                            <Avatar sx={{width: "25px", height: "25px"}}>
+                                            <Avatar sx={{ bgcolor: "green", width: "25px", height: "25px" }} variant="rounded">
                                                 <AssignmentIcon />
                                             </Avatar>
                                         </Grid>
@@ -128,7 +128,7 @@ export const AuditLogContent = () => {
                                 <TableCell>
                                     <Grid container sx={{alignItems: "center"}}>
                                         <Grid item sx={{pr: "10px"}}>
-                                            <Avatar sx={{width: "25px", height: "25px"}}>
+                                            <Avatar sx={{ bgcolor: "green", width: "25px", height: "25px" }} variant="rounded">
                                                 <AssignmentIcon />
                                             </Avatar>
                                         </Grid>
@@ -181,7 +181,7 @@ export const AuditLogContent = () => {
                                 <TableCell>
                                     <Grid container sx={{alignItems: "center"}}>
                                         <Grid item sx={{pr: "10px"}}>
-                                            <Avatar sx={{width: "25px", height: "25px"}}>
+                                            <Avatar sx={{ bgcolor: "green", width: "25px", height: "25px" }} variant="rounded">
                                                 <AssignmentIcon />
                                             </Avatar>
                                         </Grid>
