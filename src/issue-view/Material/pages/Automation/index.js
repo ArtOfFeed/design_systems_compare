@@ -2,7 +2,7 @@ import React, { useState, useMemo, useContext, createContext } from 'react';
 import { Header } from './Header';
 import { TabsContent } from './TabsContent';
 
-import { Container, Box, IconButton} from '@mui/material';
+import { Container, Box, IconButton } from '@mui/material';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -20,9 +20,6 @@ const ToggleColorMode = () => {
                 sx={{
                     display: 'flex',
                     width: '100%',
-                    // position: "absolute",
-                    // left: "30%",
-                    // top: "16.5%",
                     alignItems: 'center',
                     justifyContent: 'center',
                     bgcolor: 'background.default',
