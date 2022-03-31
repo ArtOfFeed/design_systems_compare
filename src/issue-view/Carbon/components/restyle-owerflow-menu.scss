@@ -1,0 +1,23 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+.restyledOwerflowMenu {
+    &.bx--overflow-menu,&.bx--overflow-menu__icon {
+        color: $white-0;    
+        background-color: $blue-60;
+        &.bx--overflow-menu__icon{
+            // color: $carbon--white-0;
+            fill: currentColor;    
+            background-color: $blue-60;
+        }
+        
+        &:hover {
+            background-color: $blue-60-hover;
+        }
+        &:hover{
+            // TODO! need improve animations
+            .bx--overflow-menu__icon{
+                background-color: $blue-60-hover;
+            }
+        }
+    }
+}

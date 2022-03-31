@@ -13,6 +13,7 @@ import {MaterialAtomation} from './Material/pages/Automation';
 import {Chakra} from './Chakra';
 import {Braid} from './Braid';
 import './App.css';
+import { CarbonDesignNavigation } from "./Carbon";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <NavLink to="material">MUI</NavLink>
             <NavLink to="chakra">Chakra UI</NavLink>
             <NavLink to="braid">Braid</NavLink>
+            <NavLink to="carbon">Carbon</NavLink>
           </ul>
         </nav>
         <Routes>
@@ -44,6 +46,7 @@ const App = () => {
             <Route path={'/material/issue'} exact element={<MaterialIssue />} />
             <Route path={'/material/automation'} exact element={<MaterialAtomation />} />
         </Routes>
+        <CarbonDesignNavigation />
     </BrowserRouter>
   );
 }
