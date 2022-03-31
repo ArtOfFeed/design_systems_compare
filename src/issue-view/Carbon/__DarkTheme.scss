@@ -1,0 +1,61 @@
+//=========================================
+// TRY TO USE DARK THEME
+//========================================= 
+
+// @import '@carbon/themes/scss/themes';
+
+// // Use the default white theme here
+
+// .my-dark-theme {
+//   @include carbon--theme($carbon--theme--g90) {
+//     // Use the dark theme here
+//   }
+// }
+
+
+// @import '@carbon/themes/scss/themes';
+
+// $carbon--theme: $carbon--theme--g10;
+
+// // Use the gray 10 theme
+// @include carbon--theme();
+
+// // Use the default white theme here
+
+// .carbon-dark-theme {
+//   @include carbon--theme($carbon--theme--g90) {
+//     // Use the dark theme here
+//   }
+// }
+
+
+// // ==============================
+// // https://github.com/carbon-design-system/carbon/issues/4730
+// // https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme
+// $feature-flags: (
+//   enable-css-custom-properties: true,
+// );
+
+// @import 'carbon-components/scss/globals/scss/css--helpers';
+// @import 'carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/mixins';
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+    // @include carbon--theme($carbon--theme--g100, true);
+    // @include carbon--theme($carbon--theme--g100);
+//   }
+// }
+
+// $feature-flags: (
+//   enable-css-custom-properties: true,
+// );
+
+// @import 'carbon-components/scss/globals/scss/css--helpers';
+// @import 'carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/mixins';
+
+// // @media (prefers-color-scheme: dark) {
+// //   :root {
+//   .carbon-dark-theme {
+//     @include carbon--theme($carbon--theme--g100, true);
+//   }
+// // }
