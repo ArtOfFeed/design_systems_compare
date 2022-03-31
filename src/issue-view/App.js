@@ -3,7 +3,11 @@ import {Home} from './Home';
 import {Atlassian} from './Atlassian';
 import {Adobe} from './Adobe';
 import {Microsoft} from './Microsoft';
-import {Material} from './Material';
+import {MicrosoftIssue} from './Microsoft/pages/issue-view';
+import {MicrosoftAutomation} from './Microsoft/pages/automation';
+import {Material} from "./Material";
+import {MaterialIssue} from './Material/pages/Issue-view/components';
+import {MaterialAtomation} from './Material/pages/Automation';
 import {Chakra} from './Chakra';
 import {Braid} from './Braid';
 import './App.css';
@@ -33,6 +37,10 @@ const App = () => {
             <Route path={'/material'} exact element={<Material />} />
             <Route path={'/chakra'} exact element={<Chakra />} />
             <Route path={'/braid'} exact element={<Braid />} />
+            <Route path={'/microsoft/issue'} exact element={<MicrosoftIssue />} />
+            <Route path={'/microsoft/automation'} exact element={<MicrosoftAutomation />} />
+            <Route path={'/material/issue'} exact element={<MaterialIssue />} />
+            <Route path={'/material/automation'} exact element={<MaterialAtomation />} />
         </Routes>
         <CarbonDesignNavigation />
     </BrowserRouter>
