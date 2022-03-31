@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import {Home} from './Home';
 import {Atlassian} from './Atlassian';
 import {Adobe} from './Adobe';
+import {AdobeIssueView} from './Adobe/pages/issue-view';
+import {AutomationAdobe} from './Adobe/pages/automation';
 import {Microsoft} from './Microsoft';
 import {MicrosoftIssue} from './Microsoft/pages/issue-view';
 import {MicrosoftAutomation} from './Microsoft/pages/automation';
@@ -30,7 +32,9 @@ const App = () => {
         <Routes>
             <Route path={'/'} exact element={<Home />} />
             <Route path={'/atlassian'} exact element={<Atlassian />} />
-            <Route path={'/adobe'} exact element={<Adobe />} />
+            <Route path={'/adobe'} element={<Adobe />} />
+            <Route path={'/adobe/issue'} exact element={<AdobeIssueView />} />
+            <Route path={'/adobe/automation'} exact element={<AutomationAdobe />} />
             <Route path={'/microsoft'} exact element={<Microsoft />} />
             <Route path={'/material'} exact element={<Material />} />
             <Route path={'/chakra'} exact element={<Chakra />} />
