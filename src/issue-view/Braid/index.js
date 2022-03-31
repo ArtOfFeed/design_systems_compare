@@ -1,1 +1,0 @@
-export const Braid = () => <h2 className="secondary-heading">Braid</h2>

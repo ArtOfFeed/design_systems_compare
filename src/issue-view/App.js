@@ -7,7 +7,6 @@ import {MicrosoftIssue} from './Microsoft/pages/issue-view';
 import {MicrosoftAutomation} from './Microsoft/pages/automation';
 import {Material} from './Material';
 import {Chakra} from './Chakra';
-import {Braid} from './Braid';
 import './App.css';
 
 const App = () => {
@@ -22,7 +21,6 @@ const App = () => {
             <NavLink to="microsoft">Mircosoft Fluent</NavLink>
             <NavLink to="material">MUI</NavLink>
             <NavLink to="chakra">Chakra UI</NavLink>
-            <NavLink to="braid">Braid</NavLink>
           </ul>
         </nav>
         <Routes>
@@ -32,7 +30,6 @@ const App = () => {
             <Route path={'/microsoft'} exact element={<Microsoft />} />
             <Route path={'/material'} exact element={<Material />} />
             <Route path={'/chakra'} exact element={<Chakra />} />
-            <Route path={'/braid'} exact element={<Braid />} />
             <Route path={'/microsoft/issue'} exact element={<MicrosoftIssue />} />
             <Route path={'/microsoft/automation'} exact element={<MicrosoftAutomation />} />
         </Routes>

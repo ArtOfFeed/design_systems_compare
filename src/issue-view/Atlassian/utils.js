@@ -1,7 +1,6 @@
 export const ROUTES = {
     ADS: "ADS",
     MUI: "MUI",
-    braid: "braid",
     chakraui: "chakraui",
     fluent: "fluent",
     spectrum: "spectrum",
