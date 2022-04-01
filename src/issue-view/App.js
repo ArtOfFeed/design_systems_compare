@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import {Home} from './Home';
-import {Atlassian} from './Atlassian';
+import {AtlassianIssueViev} from './Atlassian/issue-view';
+import { AtlassianAutomation } from "./Atlassian/automation/automation";
+import {Atlassian} from './Atlassian/index';
 import {Adobe} from './Adobe';
 import {AdobeIssueView} from './Adobe/pages/issue-view';
 import {AutomationAdobe} from './Adobe/pages/automation';
@@ -31,6 +33,8 @@ const App = () => {
         <Routes>
             <Route path={'/'} exact element={<Home />} />
             <Route path={'/atlassian'} exact element={<Atlassian />} />
+            <Route path={'/atlassian/issue'} exact element={<AtlassianIssueViev />} />
+            <Route path={'/atlassian/automation'} exact element={<AtlassianAutomation />} />
             <Route path={'/adobe'} element={<Adobe />} />
             <Route path={'/adobe/issue'} exact element={<AdobeIssueView />} />
             <Route path={'/adobe/automation'} exact element={<AutomationAdobe />} />

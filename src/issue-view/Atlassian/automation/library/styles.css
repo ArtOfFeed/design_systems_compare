@@ -1,0 +1,30 @@
+.box {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
+    margin: 25px;
+}
+.box:hover{
+    cursor: pointer;
+}
+.upperContent {
+    height: 45%;
+    width: 100%;
+    background-color: rgb(243, 242, 242);
+    opacity:70%;
+}
+.bottomContent{
+    height: 55%;
+    width: 100%;
+    background-color:rgb(255, 255, 255) ;
+
+}
+.bottomContent:hover {
+    background-color:rgb(243, 243, 243);
+}
+.blockOfContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

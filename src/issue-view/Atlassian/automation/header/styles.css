@@ -1,0 +1,9 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.optionsContainer {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,12 @@
+.controllPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tableControll {
+    display: flex;
+    align-items: center;
+}
+.tableContent {
+    margin-bottom: '15px';
+}
