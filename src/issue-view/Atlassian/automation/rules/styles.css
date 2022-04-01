@@ -1,0 +1,23 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: row;
+}
+.filterWrapper {
+    width: 20%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.tableWrapper {
+    width: 80%;
+    height: 300px;
+}
+.TableContentWrapper{
+    margin-top: 20px;
+}
+.avatarWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
