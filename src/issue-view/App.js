@@ -13,6 +13,8 @@ import {Material} from "./Material";
 import {MaterialIssue} from './Material/pages/Issue-view/components';
 import {MaterialAtomation} from './Material/pages/Automation';
 import {Chakra} from './Chakra';
+import {ChakraIssue} from './Chakra/pages/Issue-view';
+import {ChakraAutomation} from './Chakra/pages/Automation';
 import './App.css';
 import { CarbonDesignNavigation } from "./Carbon";
 
@@ -41,6 +43,8 @@ const App = () => {
             <Route path={'/microsoft'} exact element={<Microsoft />} />
             <Route path={'/material'} exact element={<Material />} />
             <Route path={'/chakra'} exact element={<Chakra />} />
+            <Route path={'/chakra/issue'} exact element={<ChakraIssue />} />
+            <Route path={'/chakra/automation'} exact element={<ChakraAutomation />} />
             <Route path={'/microsoft/issue'} exact element={<MicrosoftIssue />} />
             <Route path={'/microsoft/automation'} exact element={<MicrosoftAutomation />} />
             <Route path={'/material/issue'} exact element={<MaterialIssue />} />
